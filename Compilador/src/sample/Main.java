@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.controller.Splash;
 
 
 public class Main extends Application {
@@ -23,12 +24,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Principal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("vistas/Principal.fxml"));
         primaryStage.setTitle("Compilador");
         primaryStage.setScene(new Scene(root, 970, 700));
         primaryStage.show();
     }
-
 
     public static void main(String[] args) {
 

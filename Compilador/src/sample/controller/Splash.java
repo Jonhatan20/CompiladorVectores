@@ -1,4 +1,4 @@
-package sample;
+package sample.controller;
 
 import javafx.application.Platform;
 import javafx.application.Preloader;
@@ -45,8 +45,8 @@ public class Splash extends Preloader {
             public void run() {
                 Parent root2;
                 try{
-                    root2= FXMLLoader.load(getClass().getResource("Splash.fxml"));
-                    scene=new Scene(root2,600,400);
+                    root2= FXMLLoader.load(getClass().getResource("../vistas/Splash.fxml"));
+                    scene=new Scene(root2,600,335);
                 }catch(IOException e){
                     e.printStackTrace();
                 }//LLAVE CATCH

@@ -8,10 +8,10 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="960.0" styleClass="fondo" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="600.0" prefWidth="960.0" styleClass="fondo" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
    <children>
       <VBox layoutX="14.0" layoutY="-65.0" prefHeight="600.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -33,7 +33,10 @@
                         <MenuItem mnemonicParsing="false" text="Pegar" />
                   </items>
                 </Menu>
-                  <Menu mnemonicParsing="false" text="Ejecutar" />
+                  <Menu mnemonicParsing="false" text="Ejecutar">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#evtEjecutar" text="Run" />
+                     </items></Menu>
                 <Menu mnemonicParsing="false" text="Ayuda">
                   <items>
                     <MenuItem mnemonicParsing="false" text="About" />
@@ -49,12 +52,8 @@
                            <children>
                               <VBox prefHeight="547.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <Pane fx:id="paneSote" prefHeight="406.0" prefWidth="960.0" styleClass="fondoPane" stylesheets="@estilos.css">
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </Pane>
-                                    <TextArea prefHeight="200.0" prefWidth="200.0">
+                                    <HBox fx:id="paneSote" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                    <TextArea fx:id="txtConsola" prefHeight="200.0" prefWidth="200.0">
                                        <VBox.margin>
                                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                        </VBox.margin>
