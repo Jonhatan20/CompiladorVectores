@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 public final class Configs {
     public static final String UserName="";
     public static final String[] KEYWORDS = new String[] {
-            "Ent","Tex","Dob","Boo","Msj","Inicio","Fin"
+            "ent","vector","inicio","del","fin","sumar","restar"
     };
 
     public static final String KEYWORD_PATTERN = "\\b(" + String.join("|", KEYWORDS) + ")\\b";
@@ -58,8 +58,11 @@ public final class Configs {
         return spansBuilder.create();
     }
     public static String[] EXPRESIONES={
-            "[A-Za-z]{1,3}",
-            "[0-9]{2}"
-
+            "(\\s+)?inicio(\\s+){1,}del(\\s+){1,}vector",
+            "(\\s+)?fin(\\s+){1,}del(\\s+){1,}vector",
+            "(\\s+)?sumar(\\s+){1,}[A-z]+(\\s+)?\\+(\\s+)?[A-z]+(\\s+)?;",
+            "(\\s+)?restar(\\s+){1,}[A-z]+(\\s+)?\\-(\\s+)?[A-z]+(\\s+)?;",
+            "([\\s]+|(?![\\s]+))ent[ ][A-Za-z]+([\\s]+|(?![\\s]+));",
+            "(\\s+)?ent(\\s+){1,}[A-z](\\s+)?\\=(\\s+)?\\d+((\\s+)?;(\\s+)?)$"
     };
 }

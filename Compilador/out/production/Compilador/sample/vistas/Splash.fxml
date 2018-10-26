@@ -5,15 +5,19 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="335.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Splash">
+<AnchorPane prefHeight="307.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Splash">
    <children>
-      <ImageView fitHeight="344.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="334.0" fitWidth="599.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/Vectores.jpg" />
+            <Image url="@../../imagenes/SplashVectores.gif" />
          </image>
       </ImageView>
-      <ProgressBar fx:id="pro" layoutX="110.0" layoutY="299.0" prefHeight="29.0" prefWidth="380.0" progress="0.0" stylesheets="@../estilos.css" />
-      <Label fx:id="lbPro" layoutX="514.0" layoutY="311.0" prefHeight="17.0" prefWidth="72.0" />
+      <ProgressBar fx:id="pro" layoutX="107.0" layoutY="291.0" prefHeight="29.0" prefWidth="380.0" progress="0.0" stylesheets="@../estilos.css" />
+      <Label fx:id="lbPro" layoutX="508.0" layoutY="292.0" prefHeight="17.0" prefWidth="72.0" textFill="#f6ff00">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font></Label>
    </children>
 </AnchorPane>

@@ -10,7 +10,7 @@ import sample.controller.Splash;
 
 
 public class Main extends Application {
-    public static int duracion = 50000;
+    public static int duracion = 20000;
     public static int steps = 1;
 
     @Override
@@ -26,7 +26,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("vistas/Principal.fxml"));
         primaryStage.setTitle("Compilador");
-        primaryStage.setScene(new Scene(root, 970, 700));
+        primaryStage.setScene(new Scene(root, 960, 600));
         primaryStage.show();
     }
 
